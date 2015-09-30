@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags always come first -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/d3.css">
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Señal Mensaje
+					</div>
+					<div class="panel-body">
+						<form class="form-horizontal">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="senialMensaje" class="col-sm-4 control-label">m(t)=</label>
+										<div class="col-sm-8">
+											<!--<input type="text" class="form-control" id="senialMensaje" name="senialMensaje" value="1">-->
+											<p class="form-control-static">sin(t)</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="amplitudSenial" class="col-sm-4 control-label">Amplitud</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" id="amplitudSenial" name="amplitudSenial" value="1">
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Muestreo
+					</div>
+					<div class="panel-body">
+						<form class="form-horizontal">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="numeroDeMuestras" class="col-sm-4 control-label">Numero de Muestras</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" id="numeroDeMuestras" name="numeroDeMuestras" value="2048">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="frecuenciaDeMuestreo" class="col-sm-4 control-label">Frecuencia de Muestreo</label>
+										<div class="col-sm-8">
+											<div class="input-group">
+												<input type="text" class="form-control" id="frecuenciaDeMuestreo" name="frecuenciaDeMuestreo" value="100">
+												<span class="input-group-addon">Hz</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Moduladora PAM
+					</div>
+					<div class="panel-body">
+						<form class="form-horizontal">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="periodoModuladora" class="col-sm-4 control-label">Periodo</label>
+										<div class="col-sm-8">
+											<div class="input-group">
+												<input type="text" class="form-control" id="periodoModuladora" name="periodoModuladora" value="50">
+												<span class="input-group-addon">Hz</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="amplitudModuladora" class="col-sm-4 control-label">Amplitud</label>
+										<div class="col-sm-8">
+											<div class="input-group">
+												<input type="text" class="form-control" id="amplitudModuladora" name="amplitudModuladora" value="1">
+												<span class="input-group-addon">V</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="anchoModuladora" class="col-sm-4 control-label">Tau</label>
+										<div class="col-sm-8">
+											<div class="input-group">
+												<input type="text" class="form-control" id="anchoModuladora" name="anchoModuladora" value="25">
+												<span class="input-group-addon">V</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="panel-footer clearfix">
+						<button type="button" class="btn btn-primary pull-right">Modular Señal</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Forma de Onda
+					</div>
+					<div class="panel-body">
+						<div id="waveformChart"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery first, then Bootstrap JS, etc -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/d3.min.js"></script>
+		<script src="js/math.js"></script>
+		<script src="js/pam.js"></script>
+	</body>
+</html>
